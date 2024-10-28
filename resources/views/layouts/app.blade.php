@@ -3,20 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Supply Chain Management</title>
-    <!-- Include Bootstrap CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    @yield('styles') <!-- Tempat untuk stylesheet tambahan -->
+    <title>Supply Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container mt-4">
-        @yield('content') <!-- Bagian konten akan diisi di sini -->
+    <div class="d-flex">
+        @include('partials.sidebar') <!-- Sidebar yang dibuat -->
+        <div class="container-fluid p-4">
+            @yield('content') <!-- Konten utama -->
+        </div>
     </div>
-
-    <!-- Include jQuery and Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    @yield('scripts') <!-- Tempat untuk skrip tambahan -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -10,6 +10,12 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
+
+Route::get('/orders', [OrderController::class, 'index'])->name('orders.index');
+Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+Route::get('/supplies', [SupplyController::class, 'index'])->name('supplies.index');
+
+
 // Routes untuk Produk
 Route::get('/products', [ProductController::class, 'index'])->name('products.index'); // Menampilkan daftar produk
 Route::get('/products/create', [ProductController::class, 'create'])->name('products.create'); // Form tambah produk
